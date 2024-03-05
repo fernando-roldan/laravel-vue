@@ -32,11 +32,11 @@ class DatabaseSeeder extends Seeder
              'name' => 'Charger',
              'model' => date("Y-m-d H:i:s")
             ],
-            ['brands_id' => 2,
+            ['brands_id' => 1,
              'name' => 'Camaro',
              'model' => date("Y-m-d H:i:s")
             ],
-            ['brands_id' => 2,
+            ['brands_id' => 1,
              'name' => 'Aveo Sedan',
              'model' => date("Y-m-d H:i:s")
             ]
