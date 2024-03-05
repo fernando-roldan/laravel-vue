@@ -21,5 +21,25 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@test.com',
             'password' => bcrypt('test123'),
         ]);
+
+        \App\Models\Brands::factory()->create([
+            ['brand' => 'Chevrolet'],
+            ['brand' => 'Dodge']
+        ]);
+
+        \App\Models\Cars::factory()->create([
+            ['brands_id' => 2,
+             'name' => 'Charger',
+             'model' => date("Y-m-d H:i:s")
+            ],
+            ['brands_id' => 2,
+             'name' => 'Camaro',
+             'model' => date("Y-m-d H:i:s")
+            ],
+            ['brands_id' => 2,
+             'name' => 'Aveo Sedan',
+             'model' => date("Y-m-d H:i:s")
+            ]
+        ]);
     }
 }
