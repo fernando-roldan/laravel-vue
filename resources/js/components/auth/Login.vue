@@ -50,7 +50,8 @@
         data() {
           return {
             email: '',
-            password: ''
+            password: '',
+            token: ''
           };
         },
         methods: {
@@ -64,7 +65,8 @@
               // Maneja la respuesta del servidor (p. ej., redirecciona al usuario a una página de inicio)
               console.log(response.data);
               window.location.href = this.homeRoute;
-              localStorage.setItem('token', response.data.token);
+              const token = response.data.access_token;
+              localStorage.setItem('token', token);
             })
             .catch(error => {
               // Maneja errores (p. ej., muestra un mensaje de error al usuario)
